@@ -1,0 +1,12 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1935:1935"
+    enviroments:
+      - .env
+      YOUTUBE_STREAMING_URL=${YOUTUBE_STREAMING_URL}
+      YOUTUBE_STREAMING_KEY=${YOUTUBE_STREAMING_KEY}
+
